@@ -209,6 +209,20 @@
   .foot-reg{font-size:.78rem;line-height:1.7;color:#75897c}
   .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.8rem;color:#75897c}
   .disclaimer{background:rgba(202,162,74,.12);border:1px solid rgba(202,162,74,.3);color:#caa24a;border-radius:10px;padding:12px 16px;margin-top:20px;font-size:.78rem;text-align:center}
+
+  /* FAQ */
+  .faq-list{max-width:820px;margin:46px auto 0;display:flex;flex-direction:column;gap:14px}
+  .faq{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-soft);overflow:hidden}
+  .faq summary{list-style:none;cursor:pointer;padding:22px 24px;font-weight:700;color:var(--ink);font-size:1.02rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .ico{width:26px;height:26px;flex-shrink:0;border-radius:50%;background:var(--mint);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:700;transition:.2s}
+  .faq[open] summary .ico{background:var(--green);color:#fff;transform:rotate(45deg)}
+  .faq .faq-body{padding:0 24px 22px;color:var(--ink-soft);font-size:.96rem}
+  .faq[open] summary{color:var(--green)}
+
+  /* MAP */
+  .map-embed{position:relative;width:100%;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:5px solid #fff;margin-top:18px;background:var(--surface)}
+  .map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 </style>
 </head>
 <body>
@@ -573,6 +587,47 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap center">
+    <span class="eyebrow">Common questions</span>
+    <h2>Your questions, answered</h2>
+    <p class="lead">A few things patients often ask us before they book. If your question is not here, just give us a call and we will be glad to help.</p>
+  </div>
+  <div class="wrap">
+    <div class="faq-list">
+      <details class="faq">
+        <summary>Are you a private or NHS practice?<span class="ico">+</span></summary>
+        <div class="faq-body">We are a private dental practice. This lets us give you longer, unhurried appointments and a calm, gentle experience at every visit. When you get in touch, our reception team will happily talk you through how things work before you book.</div>
+      </details>
+      <details class="faq">
+        <summary>Do you offer Invisalign and clear aligners?<span class="ico">+</span></summary>
+        <div class="faq-body">Yes. Several of our dentists are certified to plan and deliver Invisalign and clear aligner treatment, and our founder Stuart Farmer is an Invisalign Key Opinion Leader. We will assess your teeth and explain whether aligners are a good fit for you before you decide anything.</div>
+      </details>
+      <details class="faq">
+        <summary>Where are you located, and is there parking?<span class="ico">+</span></summary>
+        <div class="faq-body">You will find us at 2 Lockhart Place, St Andrews, KY16 9XB, in the heart of Fife. We are easy to reach within St Andrews, and there is on-street parking nearby. If you are travelling to us for the first time, call ahead and our team will point you to the closest spots.</div>
+      </details>
+      <details class="faq">
+        <summary>Are you accepting new patients?<span class="ico">+</span></summary>
+        <div class="faq-body">Yes, we welcome new patients, including nervous patients and whole families from little ones to grandparents. Get in touch using the form below or give us a call, and we will find an appointment time that suits you.</div>
+      </details>
+      <details class="faq">
+        <summary>What makes you different from a corporate dental group?<span class="ico">+</span></summary>
+        <div class="faq-body">We are independent and have been since Stuart Farmer opened the practice in 1986. You see the same familiar faces year after year, not a rotating cast of locums, and we recommend what is right for your teeth rather than working to a chain's targets.</div>
+      </details>
+      <details class="faq">
+        <summary>I am nervous about the dentist. Can you help?<span class="ico">+</span></summary>
+        <div class="faq-body">Absolutely, and you are far from alone. Our whole approach is built around keeping you calm and comfortable, from numbing gel and warmed anaesthetic to the finest needles and a slow, gentle technique. We treat everyone without judgement, however long it has been since your last visit.</div>
+      </details>
+      <details class="faq">
+        <summary>How do I book or ask a question?<span class="ico">+</span></summary>
+        <div class="faq-body">You can call our reception team on <a href="tel:+441334897644">01334 897644</a> during opening hours, or fill in the short form below and we will get back to you. Tell us a little about what you are looking for and we will take it from there.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="section contact" id="contact">
   <div class="wrap center">
@@ -584,7 +639,7 @@
     <div class="contact-grid">
       <ul class="contact-info">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-5.7-8-11a8 8 0 1116 0c0 5.3-8 11-8 11z"/><circle cx="12" cy="10" r="3"/></svg><span><b>St Andrews Dental Care &amp; Implant Clinic</b><span>2 Lockhart Place, St Andrews, KY16 9XB</span></span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.8a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg><span><b>01334 897644</b><span>Call our reception team</span></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.8a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg><span><b><a href="tel:+441334897644" style="color:#fff">01334 897644</a></b><span>Call our reception team</span></span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Opening hours</b><span>Mon to Fri, 9:00am to 5:00pm. Please call for current times.</span></span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 6.9H22l-6 4.4 2.3 7.1L12 16.3 5.7 20.4 8 13.3l-6-4.4h7.6z"/></svg><span><b>New patients welcome</b><span>Including nervous patients and the whole family.</span></span></li>
       </ul>
@@ -599,6 +654,9 @@
         <textarea id="m" placeholder="Tell us a little about what you are looking for"></textarea>
         <button class="btn" type="submit">Request a Call Back</button>
       </form>
+    </div>
+    <div class="map-embed">
+      <iframe src="https://www.google.com/maps?q=2+Lockhart+Place+St+Andrews+KY16+9XB&output=embed" loading="lazy" title="St Andrews Dental Care location" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
     <div class="disclaimer">This is a demo concept created for review and is not the live St Andrews Dental Care website. The contact form is illustrative and does not submit.</div>
   </div>
@@ -635,7 +693,7 @@
         <h4>Find us</h4>
         <p>2 Lockhart Place</p>
         <p>St Andrews, KY16 9XB</p>
-        <p><a href="tel:01334897644">01334 897644</a></p>
+        <p><a href="tel:+441334897644">01334 897644</a></p>
       </div>
     </div>
     <p class="foot-reg">Registered dental practice. Our dentists are registered with the General Dental Council (GDC). All advertising follows ASA and GDC guidance. As a Scottish dental practice, we are regulated by Healthcare Improvement Scotland, not the CQC, which covers England only.</p>
@@ -682,6 +740,21 @@
     {"@type":"VideoObject","position":4,"name":"Our 5 patient promises","embedUrl":"https://www.youtube-nocookie.com/embed/EX8pkuFnRZA","thumbnailUrl":"https://i.ytimg.com/vi/EX8pkuFnRZA/hqdefault.jpg","uploadDate":"2024-01-01"},
     {"@type":"VideoObject","position":5,"name":"Our promises and guarantees","embedUrl":"https://www.youtube-nocookie.com/embed/hWUx2gSnB8M","thumbnailUrl":"https://i.ytimg.com/vi/hWUx2gSnB8M/hqdefault.jpg","uploadDate":"2024-01-01"},
     {"@type":"VideoObject","position":6,"name":"How a smile makeover works","embedUrl":"https://www.youtube-nocookie.com/embed/4jjRk8Alzhw","thumbnailUrl":"https://i.ytimg.com/vi/4jjRk8Alzhw/hqdefault.jpg","uploadDate":"2024-01-01"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Are you a private or NHS practice?","acceptedAnswer":{"@type":"Answer","text":"We are a private dental practice. This lets us give you longer, unhurried appointments and a calm, gentle experience at every visit. When you get in touch, our reception team will happily talk you through how things work before you book."}},
+    {"@type":"Question","name":"Do you offer Invisalign and clear aligners?","acceptedAnswer":{"@type":"Answer","text":"Yes. Several of our dentists are certified to plan and deliver Invisalign and clear aligner treatment, and our founder Stuart Farmer is an Invisalign Key Opinion Leader. We will assess your teeth and explain whether aligners are a good fit for you before you decide anything."}},
+    {"@type":"Question","name":"Where are you located, and is there parking?","acceptedAnswer":{"@type":"Answer","text":"You will find us at 2 Lockhart Place, St Andrews, KY16 9XB, in the heart of Fife. We are easy to reach within St Andrews, and there is on-street parking nearby. If you are travelling to us for the first time, call ahead and our team will point you to the closest spots."}},
+    {"@type":"Question","name":"Are you accepting new patients?","acceptedAnswer":{"@type":"Answer","text":"Yes, we welcome new patients, including nervous patients and whole families from little ones to grandparents. Get in touch using the form on our site or give us a call, and we will find an appointment time that suits you."}},
+    {"@type":"Question","name":"What makes you different from a corporate dental group?","acceptedAnswer":{"@type":"Answer","text":"We are independent and have been since Stuart Farmer opened the practice in 1986. You see the same familiar faces year after year, not a rotating cast of locums, and we recommend what is right for your teeth rather than working to a chain's targets."}},
+    {"@type":"Question","name":"I am nervous about the dentist. Can you help?","acceptedAnswer":{"@type":"Answer","text":"Absolutely, and you are far from alone. Our whole approach is built around keeping you calm and comfortable, from numbing gel and warmed anaesthetic to the finest needles and a slow, gentle technique. We treat everyone without judgement, however long it has been since your last visit."}},
+    {"@type":"Question","name":"How do I book or ask a question?","acceptedAnswer":{"@type":"Answer","text":"You can call our reception team on 01334 897644 during opening hours, or fill in the short form on our site and we will get back to you. Tell us a little about what you are looking for and we will take it from there."}}
   ]
 }
 </script>
